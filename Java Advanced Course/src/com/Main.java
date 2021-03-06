@@ -1,5 +1,4 @@
-import com.ReadBook;
-import com.WordsCounter;
+package com;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -40,5 +39,7 @@ public class Main {
             allThreadResponses.putAll(futures.get(i).get());
         }
         wordsCounter.getMostOccurringWord(allThreadResponses);
+
+        executor.shutdown();
     }
 }
